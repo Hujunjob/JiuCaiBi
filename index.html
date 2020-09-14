@@ -41,12 +41,27 @@
                 href="https://justswap.org/?lang=zh-CN#/home?tokenAddress=TCzgDfeD64yriHVVSCFWEq6Uf3r7AqPRtd&type=swap">前往Justswap</a>
         </h5>
         <img src="logo.jpg" />
+        <p>钱包地址：<span id="wallet_address"></span></p>
         <p>不做预挖、没有募资、团队零持币，全部放入Justswap流动池。</p>
         <p>其实团队只有一人，反正也没毛用的币。</p>
-        <p>合约地址：<a target="_blank" href="https://tronscan.org/#/contract/TCzgDfeD64yriHVVSCFWEq6Uf3r7AqPRtd/code">TCzgDfeD64yriHVVSCFWEq6Uf3r7AqPRtd</a></p>
-        <div>Powered By<h5>JiuCaiBi JCB</h5></div>
+        <p>合约地址：<a target="_blank"
+                href="https://tronscan.org/#/contract/TCzgDfeD64yriHVVSCFWEq6Uf3r7AqPRtd/code">TCzgDfeD64yriHVVSCFWEq6Uf3r7AqPRtd</a>
+        </p>
+        <div>Powered By<h5>JiuCaiBi JCB</h5>
+        </div>
     </div>
 
+    <script>
+        window.onload = function () {
+            const wallet_address = document.getElementById("wallet_address");
+            if (!window.tronWeb) {
+                wallet_address.textContent = "tronweb is null";
+            }else{
+                wallet_address.textContent = "tronweb is created";
+            }
+        };
+
+    </script>
 
 </body>
 
